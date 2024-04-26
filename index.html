@@ -1,23 +1,24 @@
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
     <link
       href="https://fonts.googleapis.com/css?family=Press Start 2P"
       rel="stylesheet"
     />
     <style>
+      html,
       body {
+        height: 100%; /* 전체 높이 설정 */
+        margin: 0; /* 기본 마진 제거 */
+        display: flex; /* Flexbox 모델 사용 */
+        justify-content: center; /* 가로 중앙 정렬 */
+        align-items: center; /* 세로 중앙 정렬 */
         font-family: "Press Start 2P";
-        font-size: 22px;
       }
-      #gif-container {
-        text-align: center;
-        margin-top: 50px;
-      }
-
-      #gif {
-        width: 300px;
+      .centered {
+        text-align: center; /* 텍스트 가운데 정렬 */
+        font-size: 24px; /* 폰트 크기 설정 */
       }
     </style>
     <script src="texts.js"></script>
@@ -25,11 +26,7 @@
   </head>
 
   <body>
-    <p>{texts[0][0]}</p>
-    <!-- <div id="gif-container">
-        <img src="https://raw.githubusercontent.com/iamaheart/iamaheart/main/heart_beat.gif" alt="GIF" id="gif">
-    </div> -->
-
+    <p class="centered">I am a heart.</p>
     <!-- <button onclick="playMusic()">Play Melody</button> -->
   </body>
 </html>
