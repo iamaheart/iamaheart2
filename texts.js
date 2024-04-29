@@ -1,23 +1,11 @@
 const _0 = [
-    'Focus on your heart.',
-    '심장으로 부터 온몸의 끝까지 피가 퍼집니다.',
-    '온몸이 이완됩니다.',
-    '몸이 붕 뜨는 느낌을 받습니다.',
-    '저절로 미소가 띄워집니다.',
-]
+  "Focus on your heart.",
+  "Blood spreads from the heart to the end of the body.",
+  "The whole body relaxes.",
+  "I feel like my body is floating.",
+  "A smile comes out on its own.",
+];
 
-const _1 = [
-    '올바른 발성을 하세요',
-    '얼굴 전체가 울립니다.',
-]
+const _3 = ["Just rely on yourself."];
 
-const _2 = [
-    '말은 행동입니다.',
-    '언어는 생각의 표현입니다.',
-]
-
-const _3 = [
-    '자신만을 의지하세요.',
-]
-
-const texts = [_0,_1,];
+const texts = [_0, _3];
