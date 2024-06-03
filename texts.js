@@ -22,4 +22,8 @@ const _6 = [
   "Being itself is happiness.",
 ];
 
+const _7 = [
+  "What I do is who I am.",
+];
+
 const texts = [_0, _3];
