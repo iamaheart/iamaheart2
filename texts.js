@@ -24,9 +24,9 @@ const _6 = [
 
 const _7 = [
   "What I do is who I am.",
-  "음식이 인체가 된다.",
-  "생각이 인성이 된다.",
-  "행위가 인품이 된다.",
+  "Food becomes the body.",
+  "Thoughts become personality.",
+  "Actions become character.",
 ];
 
 const texts = [_0, _3];
