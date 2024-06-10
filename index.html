@@ -1,37 +1,79 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Press Start 2P"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Centered</title>
     <style>
-      html,
       body {
-        height: 100%; /* 전체 높이 설정 */
-        margin: 0; /* 기본 마진 제거 */
-        display: flex; /* Flexbox 모델 사용 */
-        justify-content: center; /* 가로 중앙 정렬 */
-        align-items: center; /* 세로 중앙 정렬 */
-        font-family: "Press Start 2P";
-      }
-      .centered {
-        text-align: center; /* 텍스트 가운데 정렬 */
-        font-size: 24px; /* 폰트 크기 설정 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0; /* 배경색을 추가하여 SVG가 더 잘 보이도록 */
       }
       .center-svg {
-            width: 200px;
-            height: 200px;
-        }
+        width: 200px;
+        height: 200px;
+      }
     </style>
-    <script src="texts.js"></script>
-    <script src="play.js"></script>
   </head>
-
   <body>
-    <p class="centered">I am a heart.</p>
-    <!-- <button onclick="playMusic()">Play Melody</button> -->
-    <object class="center-svg" type="image/svg+xml" data="./iamahe.art.svg"></object>
+    <svg
+      width="200"
+      height="200"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g transform="scale(1, -1) translate(0, -16) rotate(270, 8, 8)">
+        <rect width="1" height="1" x="1" y="1" fill="black" />
+        <rect width="1" height="1" x="3" y="1" fill="black" />
+        <rect width="1" height="1" x="4" y="1" fill="black" />
+        <rect width="1" height="1" x="7" y="1" fill="black" />
+        <rect width="1" height="1" x="11" y="1" fill="black" />
+        <rect width="1" height="1" x="6" y="2" fill="black" />
+        <rect width="1" height="1" x="8" y="2" fill="black" />
+        <rect width="1" height="1" x="10" y="2" fill="black" />
+        <rect width="1" height="1" x="12" y="2" fill="black" />
+        <rect width="1" height="1" x="3" y="3" fill="black" />
+        <rect width="1" height="1" x="7" y="3" fill="black" />
+        <rect width="1" height="1" x="11" y="3" fill="black" />
+        <rect width="1" height="1" x="2" y="4" fill="black" />
+        <rect width="1" height="1" x="4" y="4" fill="black" />
+        <rect width="1" height="1" x="8" y="4" fill="black" />
+        <rect width="1" height="1" x="12" y="4" fill="black" />
+        <rect width="1" height="1" x="3" y="5" fill="black" />
+        <rect width="1" height="1" x="4" y="6" fill="black" />
+        <rect width="1" height="1" x="6" y="6" fill="black" />
+        <rect width="1" height="1" x="7" y="6" fill="black" />
+        <rect width="1" height="1" x="8" y="6" fill="black" />
+        <rect width="1" height="1" x="10" y="6" fill="black" />
+        <rect width="1" height="1" x="11" y="6" fill="black" />
+        <rect width="1" height="1" x="12" y="6" fill="black" />
+        <rect width="1" height="1" x="7" y="7" fill="black" />
+        <rect width="1" height="1" x="11" y="7" fill="black" />
+        <rect width="1" height="1" x="4" y="8" fill="black" />
+        <rect width="1" height="1" x="8" y="8" fill="black" />
+        <rect width="1" height="1" x="10" y="8" fill="black" />
+        <rect width="1" height="1" x="3" y="9" fill="black" />
+        <rect width="1" height="1" x="4" y="10" fill="black" />
+        <rect width="1" height="1" x="7" y="10" fill="black" />
+        <rect width="1" height="1" x="11" y="10" fill="black" />
+        <rect width="1" height="1" x="3" y="11" fill="black" />
+        <rect width="1" height="1" x="6" y="11" fill="black" />
+        <rect width="1" height="1" x="7" y="11" fill="black" />
+        <rect width="1" height="1" x="8" y="11" fill="black" />
+        <rect width="1" height="1" x="10" y="11" fill="black" />
+        <rect width="1" height="1" x="11" y="11" fill="black" />
+        <rect width="1" height="1" x="12" y="11" fill="black" />
+        <rect width="1" height="1" x="4" y="12" fill="black" />
+        <rect width="1" height="1" x="6" y="12" fill="black" />
+        <rect width="1" height="1" x="8" y="12" fill="black" />
+        <rect width="1" height="1" x="11" y="12" fill="black" />
+        <rect width="1" height="1" x="13" y="12" fill="black" />
+        <rect width="1" height="1" x="8" y="14" fill="black" />
+      </g>
+    </svg>
   </body>
 </html>
