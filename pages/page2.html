@@ -70,14 +70,15 @@
                 svg.setAttribute("viewBox", "0 0 320 320");
 
                 pixels.forEach((pixel, index) => {
-                    const rect = document.createElementNS(svgNamespace, "rect");
-                    rect.setAttribute("x", (index % 16) * 20);
-                    rect.setAttribute("y", Math.floor(index / 16) * 20);
-                    rect.setAttribute("width", "20");
-                    rect.setAttribute("height", "20");
-                    rect.setAttribute("fill", pixel.classList.contains("active") ? "black" : "white");
-                    rect.setAttribute("stroke", "#ccc");
-                    svg.appendChild(rect);
+                    if (pixel.classList.contains("active")) {
+                        const rect = document.createElementNS(svgNamespace, "rect");
+                        rect.setAttribute("x", (index % 16) * 20);
+                        rect.setAttribute("y", Math.floor(index / 16) * 20);
+                        rect.setAttribute("width", "20");
+                        rect.setAttribute("height", "20");
+                        rect.setAttribute("fill", "black");
+                        svg.appendChild(rect);
+                    }
                 });
 
                 const svgData = new XMLSerializer().serializeToString(svg);
