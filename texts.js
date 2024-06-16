@@ -29,4 +29,10 @@ const _7 = [
   "Actions become character.",
 ];
 
+const _8 = [
+  "내가 바꿀 수 있는 건 나 자신 뿐이다.",
+  "내가 바뀌면 모든것이 바뀐다.",
+  "나는 내 신념대로 바뀐다.",
+]
+
 const texts = [_0, _3];
