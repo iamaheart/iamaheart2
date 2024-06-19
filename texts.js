@@ -6,21 +6,13 @@ const _0 = [
   "A smile comes out on its own.",
 ];
 
-const _3 = [
-  "Just rely on yourself."
-];
+const _3 = ["Just rely on yourself."];
 
-const _4 = [
-  "Truth applies to everything."
-];
+const _4 = ["Truth applies to everything."];
 
-const _5 = [
-  "Comparison is the root of all evil.",
-];
+const _5 = ["Comparison is the root of all evil."];
 
-const _6 = [
-  "Being itself is happiness.",
-];
+const _6 = ["Being itself is happiness."];
 
 const _7 = [
   "What I do is who I am.",
@@ -30,9 +22,9 @@ const _7 = [
 ];
 
 const _8 = [
-  "내가 바꿀 수 있는 건 나 자신 뿐이다.",
-  "내가 바뀌면 모든것이 바뀐다.",
-  "나는 내 신념대로 바뀐다.",
-]
+  "The only thing I can change is myself.",
+  "But when I change, everything changes.",
+  "And I change according to my beliefs.",
+];
 
 const texts = [_0, _3];
