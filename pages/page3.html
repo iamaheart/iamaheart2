@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16x16 Pixel Art</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(16, 20px);
+            grid-template-rows: repeat(16, 20px);
+            margin-top: 10px;
+        }
+        .pixel {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ddd;
+        }
+        .palette {
+            display: grid;
+            grid-template-columns: repeat(7, 30px);
+            grid-template-rows: repeat(3, 30px);
+            grid-gap: 5px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .color {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <div class="palette" id="palette"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+
+    <script>
+        const colors = {
+            'red': ['rgb(128, 0, 0)', 'rgb(255, 0, 0)', 'rgb(255, 128, 128)'],
+            'orange': ['rgb(128, 82, 0)', 'rgb(255, 165, 0)', 'rgb(255, 207, 128)'],
+            'yellow': ['rgb(128, 128, 0)', 'rgb(255, 255, 0)', 'rgb(255, 255, 128)'],
+            'green': ['rgb(0, 128, 0)', 'rgb(0, 255, 0)', 'rgb(128, 255, 128)'],
+            'blue': ['rgb(0, 0, 128)', 'rgb(0, 0, 255)', 'rgb(128, 128, 255)'],
+            'navy': ['rgb(0, 0, 64)', 'rgb(0, 0, 128)', 'rgb(64, 64, 128)'],
+            'purple': ['rgb(64, 0, 64)', 'rgb(128, 0, 128)', 'rgb(192, 128, 192)'],
+        };
+
+        let selectedColor = 'rgb(255, 0, 0)';
+
+        function createPalette() {
+            const palette = document.getElementById('palette');
+            for (const colorName in colors) {
+                colors[colorName].forEach((color, index) => {
+                    const colorDiv = document.createElement('div');
+                    colorDiv.className = 'color';
+                    colorDiv.style.backgroundColor = color;
+                    colorDiv.addEventListener('click', () => {
+                        selectedColor = color;
+                    });
+                    palette.appendChild(colorDiv);
+                });
+            }
+        }
+
+        function createGrid() {
+            const grid = document.getElementById('grid');
+            for (let i = 0; i < 16 * 16; i++) {
+                const pixel = document.createElement('div');
+                pixel.className = 'pixel';
+                pixel.addEventListener('click', () => {
+                    pixel.style.backgroundColor = selectedColor;
+                });
+                grid.appendChild(pixel);
+            }
+        }
+
+        createPalette();
+        createGrid();
+    </script>
+</body>
+</html>
