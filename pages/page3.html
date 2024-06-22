@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>16x16 Pixel Art</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
         .grid {
             display: grid;
             grid-template-columns: repeat(16, 20px);
@@ -18,11 +27,10 @@
         }
         .palette {
             display: grid;
-            grid-template-columns: repeat(7, 30px);
+            grid-template-columns: repeat(9, 30px);
             grid-template-rows: repeat(3, 30px);
             grid-gap: 5px;
             margin-top: 20px;
-            justify-content: center;
         }
         .color {
             width: 30px;
@@ -30,11 +38,26 @@
             border: 1px solid #000;
             cursor: pointer;
         }
+        .selected-color {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .selected-color div {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="controls">
         <div class="palette" id="palette"></div>
+        <div class="selected-color">
+            <span>Selected Color:</span>
+            <div id="currentColor"></div>
+        </div>
     </div>
     <div class="grid" id="grid"></div>
 
@@ -47,23 +70,39 @@
             'blue': ['rgb(0, 0, 128)', 'rgb(0, 0, 255)', 'rgb(128, 128, 255)'],
             'navy': ['rgb(0, 0, 64)', 'rgb(0, 0, 128)', 'rgb(64, 64, 128)'],
             'purple': ['rgb(64, 0, 64)', 'rgb(128, 0, 128)', 'rgb(192, 128, 192)'],
+            'black': ['rgb(0, 0, 0)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)'],
+            'white': ['rgb(255, 255, 255)', 'rgb(255, 255, 255)', 'rgb(255, 255, 255)'],
         };
 
         let selectedColor = 'rgb(255, 0, 0)';
+        let clickCount = 0;
+
+        function updateSelectedColorDisplay() {
+            document.getElementById('currentColor').style.backgroundColor = selectedColor;
+        }
 
         function createPalette() {
             const palette = document.getElementById('palette');
-            for (const colorName in colors) {
-                colors[colorName].forEach((color, index) => {
+            const colorOrder = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple', 'black', 'white'];
+
+            for (let i = 0; i < 3; i++) {
+                colorOrder.forEach(colorName => {
                     const colorDiv = document.createElement('div');
                     colorDiv.className = 'color';
-                    colorDiv.style.backgroundColor = color;
+                    colorDiv.style.backgroundColor = colors[colorName][i];
                     colorDiv.addEventListener('click', () => {
-                        selectedColor = color;
+                        selectedColor = colors[colorName][i];
+                        clickCount = 0;
+                        updateSelectedColorDisplay();
                     });
                     palette.appendChild(colorDiv);
                 });
             }
+        }
+
+        function adjustBrightness(color, amount) {
+            const colorArr = color.match(/\d+/g).map(Number);
+            return `rgb(${Math.min(255, Math.max(0, colorArr[0] + amount))}, ${Math.min(255, Math.max(0, colorArr[1] + amount))}, ${Math.min(255, Math.max(0, colorArr[2] + amount))})`;
         }
 
         function createGrid() {
@@ -72,7 +111,13 @@
                 const pixel = document.createElement('div');
                 pixel.className = 'pixel';
                 pixel.addEventListener('click', () => {
-                    pixel.style.backgroundColor = selectedColor;
+                    clickCount++;
+                    let brightnessAdjustment = 0;
+                    if (clickCount % 2 === 1) {
+                        brightnessAdjustment = -70;
+                    }
+                    const adjustedColor = adjustBrightness(selectedColor, brightnessAdjustment);
+                    pixel.style.backgroundColor = adjustedColor;
                 });
                 grid.appendChild(pixel);
             }
@@ -80,6 +125,7 @@
 
         createPalette();
         createGrid();
+        updateSelectedColorDisplay();
     </script>
 </body>
 </html>
