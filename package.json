@@ -3,7 +3,7 @@
   "name": "iamaheart",
   "version": "1.0.0",
   "description": "",
-  "main": "play.js",
+  "main": "./src/index.js",
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
