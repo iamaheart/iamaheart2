@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#currentColor {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.clear {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(16, 20px);
+  grid-template-rows: repeat(16, 20px);
+  gap: 1px;
+}
+
+.pixel {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
