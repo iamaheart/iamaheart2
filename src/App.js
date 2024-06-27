@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
+import Page5 from "./pages/page5";
 
 function App() {
   return (
     <div>
-      <h1>Hello, React!</h1>
-      <p>This is a React component inside your existing project.</p>
+      <Page5 />
     </div>
   );
 }
