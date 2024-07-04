@@ -1,0 +1,10 @@
+.container {
+  gap: 10px; /* 원하는 간격을 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character {
+  padding: 5px;
+}

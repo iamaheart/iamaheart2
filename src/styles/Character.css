@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  gap: 10px; /* 원하는 간격을 설정 */
+  justify-content: center; /* 필요한 경우 추가 정렬 */
+  align-items: center; /* 필요한 경우 추가 정렬 */
+}
