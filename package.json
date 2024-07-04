@@ -3,12 +3,13 @@
   "name": "iamaheart",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "./src/index.tsx",
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "clean": "rimraf ./dist"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,8 @@
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
     "babel-loader": "^9.1.3",
     "html-webpack-plugin": "^5.6.0",
     "react": "^18.3.1",
@@ -34,6 +37,6 @@
     "gh-pages": "^6.1.1",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   }
 }
