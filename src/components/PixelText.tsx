@@ -1,13 +1,10 @@
+import PixelTextProps from "../interfaces/PixelTextProps";
 import PixelCharacter from "./PixelCharacter";
 
-interface Props {
-  text: string;
-}
-
-export default function PixelText({ text }: Props) {
+export default function PixelText({ text, size, color }: PixelTextProps) {
   return (
     <div>
-      <PixelCharacter text={text} />
+      <PixelCharacter text={text} size={size} color={color} />
     </div>
   );
 }
