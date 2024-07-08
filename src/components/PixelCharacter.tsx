@@ -1,16 +1,13 @@
 import Character from "./Character";
 import "../styles/PixelCharacter.css";
+import PixelTextProps from "../interfaces/PixelTextProps";
 
-interface Props {
-  text: string;
-}
-
-export default function PixelCharacter({ text }: Props) {
+export default function PixelCharacter({ text, size, color }: PixelTextProps) {
   const arr = text.split("");
   return (
     <div className="container" style={{ gap: 10 }}>
       {arr.map((char: string, index: number) => (
-        <Character num={char.charCodeAt(0)} size={10} />
+        <Character num={char.charCodeAt(0)} size={size} key={index} />
       ))}
     </div>
   );
