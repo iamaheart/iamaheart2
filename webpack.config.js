@@ -9,7 +9,7 @@ module.exports = {
     publicPath: "/",
   },
   resolve: {
-    extensions: [".js", ".ts", ".tsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   module: {
     rules: [
@@ -19,7 +19,7 @@ module.exports = {
         use: "ts-loader",
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader",
       },
