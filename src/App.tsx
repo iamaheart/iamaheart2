@@ -1,9 +1,9 @@
-import PixelText from "./components/PixelText";
+import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <div>
-      <PixelText text={"i am AB8lFsde352ggdfsGHNM..."} />
+      <MainPage />
     </div>
   );
 }
