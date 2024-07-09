@@ -1,0 +1,8 @@
+/* PixelString.css */
+
+.pixel-text {
+  white-space: pre-wrap; /* 텍스트가 컨테이너의 너비를 넘어가면 줄바꿈되도록 설정 */
+  display: inline-block; /* 인라인 블록으로 설정하여 필요한 너비를 차지하도록 설정 */
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  flex-flow: row wrap; /* flex-direction: row; flex-wrap: wrap; */
+}
