@@ -1,0 +1,16 @@
+/* PixeWriting.css */
+
+.pixel-writing {
+  display: flex;
+  flex-direction: column;
+}
+
+.pixel-sentence {
+  display: flex;
+  flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
+}
+
+.pixel-word {
+  display: flex;
+  flex-wrap: wrap; /* 처음부터 wrap 속성을 적용 */
+}
